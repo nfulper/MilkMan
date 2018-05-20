@@ -1,0 +1,37 @@
+@page
+@model WebApplication001.Pages.Loads.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Load</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Load.FarmName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Load.FarmName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Load.Pounds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Load.Pounds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Load.Time)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Load.Time)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Load.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
