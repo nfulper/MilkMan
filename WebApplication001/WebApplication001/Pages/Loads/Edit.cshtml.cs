@@ -53,7 +53,7 @@ namespace WebApplication001.Pages.Loads
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!LoadExists(Load.ID))
+                if (!_context.Load.Any(e => e.ID == Load.ID))
                 {
                     return NotFound();
                 }

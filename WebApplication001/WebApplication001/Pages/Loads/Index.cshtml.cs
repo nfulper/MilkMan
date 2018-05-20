@@ -18,11 +18,21 @@ namespace WebApplication001.Pages.Loads
             _context = context;
         }
 
-        public IList<Load> Load { get;set; }
+        public IList<Load> Load { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string searchString)
         {
-            Load = await _context.Load.ToListAsync();
+            var loads = from l in _context.Load
+                         select l;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                loads = loads.Where(s => s.FarmName.Contains(searchString));
+            }
+
+            Load = await loads.ToListAsync();
         }
     }
 }
+
+    
