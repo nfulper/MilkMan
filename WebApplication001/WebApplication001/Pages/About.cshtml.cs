@@ -12,7 +12,7 @@ namespace WebApplication001.Pages
 
         public void OnGet()
         {
-            Message = "Your application description page.";
+            Message = "Why your company needs the MilkMan!!!";
         }
     }
 }

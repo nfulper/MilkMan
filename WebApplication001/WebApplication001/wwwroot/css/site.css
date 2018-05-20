@@ -3,6 +3,10 @@ body {
     padding-bottom: 20px;
 }
 
+p {
+    font: bold;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
@@ -33,3 +37,4 @@ body {
         display: none;
     }
 }
+
